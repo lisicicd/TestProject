@@ -1,10 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Lovely Jubbly Tacos</title>
 </head>
 <body>
+	<h1 th:text="${poruka}"></h1>
 
+<div class="grid">
+	<div class="ingredient-group" id="wraps">
+		<h3>Designate your wrap:</h3>
+		<div th:each="ingredient : ${wrap}">
+			<input name="ingredients" type="checkbox" th:value="${ingredient.id}"/>
+			<span th:text="${ingredient.name}">INGREDIENT</span><br/>
+		</div>
+	</div>
+</div>
+
+
+	
 </body>
 </html>
