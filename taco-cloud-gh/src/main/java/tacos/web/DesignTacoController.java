@@ -42,7 +42,7 @@ public class DesignTacoController {
 			}
 		
 		model.addAttribute("design", new Taco());
-		model.addAttribute("poruka", "Lovely Jubbly Taco DESIGN FACTORY!!!");
+		model.addAttribute("poruka", "Lovely Jubbly Taco Design Factory!!!");
 		return "design";
 	}
 	

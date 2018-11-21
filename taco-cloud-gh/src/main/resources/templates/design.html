@@ -2,23 +2,40 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	  xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="ISO-8859-1">
-<title>Lovely Jubbly Tacos</title>
+	<meta charset="ISO-8859-1">
+	<title>Lovely Jubbly Tacos</title>
+	<link rel="stylesheet" th:href="@{/stylesA.css}" />
 </head>
 <body>
 	<h1 th:text="${poruka}"></h1>
-
-<div class="grid">
-	<div class="ingredient-group" id="wraps">
-		<h3>Designate your wrap:</h3>
-		<div th:each="ingredient : ${wrap}">
-			<input name="ingredients" type="checkbox" th:value="${ingredient.id}"/>
-			<span th:text="${ingredient.name}">INGREDIENT</span><br/>
-		</div>
-	</div>
-</div>
-
-
+	<img th:src="@{/images/TacoCloud.png}" />
 	
+<form method="POST" th:object="${design}">	
+	<div class="grid">
+	
+		<div class="ingredient-group" id="wraps">
+			<h3>Tortolja:</h3>
+			<div th:each="ingredient : ${wrap}">
+				<input name="ingredients" type="checkbox" th:value="${ingredient.id}"/>
+				<span th:text="${ingredient.name}">INGREDIENT</span><br/>
+			</div>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		<div>
+			<h3>Naziv kreiranog Taco-a:</h3>
+			<input type="text" th:field="*{name}"/><br/>
+			<button>Snimi</button>
+		</div>
+
+	</div>
+</form>
+
 </body>
 </html>
