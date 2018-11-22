@@ -61,10 +61,10 @@ public class DesignTacoController {
 	@PostMapping
 	public String processDesign(@Valid Taco design, Errors errors,  Model model) {
 		log.info("Taco submitted: " + design);
-		model.addAttribute("design", design);
-		if(errors.hasErrors()) {
-			return "design";
-		}
+		//model.addAttribute("design", design);
+//		if(errors.hasErrors()) {
+//			return "design";
+//		}
 		// Save the Taco Design
 		log.info("Taco submitted: " + design);
 		//return "home";

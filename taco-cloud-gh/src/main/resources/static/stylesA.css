@@ -33,11 +33,9 @@ div.ingredient-group:nth-child(even) {
 }
 
 div.ingredient-group {
-	width: 30%;
-	padding: 30px;
+	width: 33%;
+	padding: 10px;
 	text-align: left;
-	
-	padding-left:  100px;
 }
 
 .grid:after {
