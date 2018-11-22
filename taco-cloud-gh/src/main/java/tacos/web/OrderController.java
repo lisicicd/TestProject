@@ -32,7 +32,8 @@ public class OrderController {
 	}
 	
 	@PostMapping()
-	public String processForm(@Valid Order order, Errors errors) {
+	public String processForm(@Valid Order order, Errors errors, Model model) {
+		model.addAttribute("poruka", "Lovely Jubbly Taco Design Factory!!!");
 		if(errors.hasErrors()) {
 			return "orderForm";
 		}

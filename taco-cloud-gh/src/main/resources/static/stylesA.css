@@ -63,3 +63,12 @@ a {
 	color: white;
 	font-style: italic;
 }
+
+.ovo {    
+	padding-left: 50px;
+	text-align: left;
+}
+
+.ono {    
+	transform: translatex(30%);
+}
