@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
+<head>
+	
+	<title>Lovely Jubbly Tacos</title>
+	<link rel="stylesheet" th:href="@{/stylesA.css}" />
+</head>
+<body>
+	<h1 th:text="${poruka}"></h1>
+	<img th:src="@{/images/TacoCloud.png}"/>
+
+	<form method="POST" th:action="@{/orders}"  th:object="${order}">	
+	
+		<h1>Narucite Vase Taco kreacije</h1>	
+		<a th:href="@{/design}" id="another">Dizajnirajte jos jedan Taco</a>
+	
+		<div th:if="${#fields.hasErrors()}">
+			<span class="validationError">
+				Please correct the problems below and resubmit.
+			</span>
+		</div>
+	
+		<h3>Podaci o isporuci:</h3>
+		
+		<label for="name">Ime: </label>
+		<input type="text" th:field="*{name}"/>
+		<span class="validationError"
+			  th:if="${#fields.hasErrors('name')}"
+			  th:errors="*{name}">CC Num Error</span>
+		<br/>
+		
+		<label for="street">Ulica: </label>
+		<input type="text" th:field="*{street}"/>
+		<span class="validationError"
+			  th:if="${#fields.hasErrors('street')}"
+			  th:errors="*{street}">CC Num Error</span>
+		<br/>
+		
+		<label for="city">Grad: </label>
+		<input type="text" th:field="*{city}"/>
+		<span class="validationError"
+			  th:if="${#fields.hasErrors('city')}"
+			  th:errors="*{city}">CC Num Error</span>
+		<br/>
+		
+		<label for="state">Drzava: </label>
+		<input type="text" th:field="*{state}"/>
+		<span class="validationError"
+			  th:if="${#fields.hasErrors('state')}"
+			  th:errors="*{state}">CC Num Error</span>
+		<br/>
+		
+		<label for="zip">Postanski broj: </label>
+		<input type="text" th:field="*{zip}"/>
+		<span class="validationError"
+			  th:if="${#fields.hasErrors('zip')}"
+			  th:errors="*{zip}">CC Num Error</span>
+		<br/>
+	
+		<label for="ccNumber">Broj kreditne: </label>
+		<input type="text" th:field="*{ccNumber}"/>
+		<span class="validationError"
+			  th:if="${#fields.hasErrors('ccNumber')}"
+			  th:errors="*{ccNumber}">CC Num Error</span>
+		<br/>
+		
+		<label for="ccExpiration">Vazi do: </label>
+		<input type="text" th:field="*{ccExpiration}"/>
+		<span class="validationError"
+			  th:if="${#fields.hasErrors('ccExpiration')}"
+			  th:errors="*{ccExpiration}">CC Num Error</span>
+		<br/>
+		
+		<label for="ccCVV">Kod: </label>
+		<input type="text" th:field="*{ccCVV}"/>
+		<span class="validationError"
+			  th:if="${#fields.hasErrors('ccCVV')}"
+			  th:errors="*{ccCVV}">CC Num Error</span>
+		<br/>
+		
+	
+	<div class="grid">
+
+
+	</div>
+	<div>
+		<h3>Ako ste zavtšili, možete zaključiti narudžbinu:</h3>
+		<input type="submit" value="Naruči">
+	</div>
+</form>
+
+</body>
+</html>

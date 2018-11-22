@@ -1,5 +1,12 @@
 html {
-	background-color: rgb(190,190,190);
+	background-color: rgb(50,50,50);
+	margin: auto;
+	width: 50%;
+	allign-left: auto;
+	allign-right: auto;
+	display: block;
+	text-align: center;
+
 }
 
 body{
@@ -11,7 +18,8 @@ body {
 	padding: 0;	
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
-	color: red;
+	color: white;
+	
 }
 
 div.ingredient-group:nth-child(odd) {
@@ -25,13 +33,20 @@ div.ingredient-group:nth-child(even) {
 }
 
 div.ingredient-group {
-	width: 50%;
+	width: 30%;
+	padding: 30px;
+	text-align: left;
+	
+	padding-left:  100px;
 }
 
 .grid:after {
   content: "";
   display: table;
   clear: both;
+}
+.grid {
+	
 }
 
 *, *:after, *:before {
@@ -42,4 +57,11 @@ div.ingredient-group {
 
 span.validationError {
 	color: red;
+	
+}
+
+a {
+	text-decoration: none;
+	color: white;
+	font-style: italic;
 }
