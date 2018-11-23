@@ -15,10 +15,10 @@ public class Taco {
 	private Date createdAt;
 	
 	@NotNull
-	@Size(min=5, message="Ime mora imati bar 5 karaktera")
+	@Size(min=5, message="Ime mora imati bar 5 karaktera!")
 	private String name;
-	@NotEmpty (message="Morate izabrati bar jedan sastojak")
-	private List<String> ingredients;
+	@NotEmpty (message="Morate izabrati bar jedan sastojak!")
+	private List<Ingredient> ingredients;
 	
 	
 }

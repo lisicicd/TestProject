@@ -12,6 +12,10 @@
         
     <form method="POST" th:object="${design}">
     
+    	<span class="validationError"
+          th:if="${#fields.hasErrors('ingredients')}" 
+          th:errors="*{ingredients}">Ingredient Error</span>
+    
     	<div class="grid">
 			<div class="ingredient-group" id="wraps">
 				<h3>Tortolja:</h3>
@@ -53,10 +57,10 @@
     	<div>
 			<h3>Naziv Vaseg Taco-a:</h3>
 			<input type="text" th:field="*{name}"/><br/>
-			<!--   Naziv Taco-sa mora biti bar 5 karaktera   
+			<!--   Naziv Taco-sa mora biti bar 5 karaktera   -->
 			<span class="validationError"
             		th:if="${#fields.hasErrors('name')}"
-            		th:errors="*{name}">Name Error</span>-->
+            		th:errors="*{name}">Name Error</span>
             		
 			<br/><button>Sacuvaj recepturu</button>
 		</div>
