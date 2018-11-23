@@ -1,5 +1,5 @@
 html {
-	background-color: rgb(50,50,50);
+	background-color: rgb(200,50,50);
 	margin: auto;
 	width: 50%;
 	allign-left: auto;
@@ -54,7 +54,7 @@ div.ingredient-group {
 }
 
 span.validationError {
-	color: red;
+	color: black;
 	
 }
 
