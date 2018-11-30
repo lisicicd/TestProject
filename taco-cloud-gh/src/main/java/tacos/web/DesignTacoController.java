@@ -68,19 +68,21 @@ public class DesignTacoController {
   
 	 @GetMapping
   		public String showDesignForm(Model model) {
-  		model.addAttribute("design", new Taco());
+  		model.addAttribute("taco", new Taco());
   		return "design1";
   		}
 
 	 @PostMapping
 	  public String processDesign(
-	      @Valid  @ModelAttribute("design")Taco taco, Errors errors, Model model,
-	      @ModelAttribute Order order) {
-
-	    if (errors.hasErrors()) {
-	      return "design1";
-	    }
-
+	     @Valid  @ModelAttribute("taco")Taco taco, Errors errors, Model model,
+	     @ModelAttribute Order order) {
+		 System.out.println("ERROR");
+		 System.out.println(taco);
+		 System.out.println(errors);
+		 if (errors.hasErrors()) {
+			 return "design1";
+		 }
+		 System.out.println("OK");
 	    Taco saved = designRepo.save(taco);
 	    order.addDesign(saved);
 

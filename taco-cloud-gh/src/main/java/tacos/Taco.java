@@ -19,6 +19,5 @@ public class Taco {
 	private String name;
 	@NotEmpty (message="Morate izabrati bar jedan sastojak!")
 	private List<Ingredient> ingredients;
-	
-	
+	 
 }
